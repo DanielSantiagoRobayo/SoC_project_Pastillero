@@ -1,3 +1,4 @@
-crc16.o: /home/daniel/litex/litex/soc/software/libbase/crc16.c \
- /home/daniel/litex/litex/soc/software/libbase/crc.h
-/home/daniel/litex/litex/soc/software/libbase/crc.h:
+crc16.o: /opt/litex/litex/soc/software/libbase/crc16.c \
+ /opt/litex/litex/soc/software/libbase/crc.h
+
+/opt/litex/litex/soc/software/libbase/crc.h:

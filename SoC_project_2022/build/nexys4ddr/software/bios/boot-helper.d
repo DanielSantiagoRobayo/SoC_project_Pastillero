@@ -1,2 +1,1 @@
-boot-helper.o: \
- /home/daniel/litex/litex/soc/cores/cpu/vexriscv/boot-helper.S
+boot-helper.o: /opt/litex/litex/soc/cores/cpu/vexriscv/boot-helper.S

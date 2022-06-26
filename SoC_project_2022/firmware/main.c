@@ -185,7 +185,8 @@ static void rgbled_test(void)
 
 }
 
-
+/* VGA */
+/*
 static void vga_test(void)
 {
 	int x,y;
@@ -204,20 +205,15 @@ static void vga_test(void)
 		}
 	}
 }
+*/
 
-
-static void wifi_read(void){
-	uint32_t buffer = 0;
-	for (int i = 0; i < 4; i++)
-	{
-		buffer = (buffer >> 8) | (uart_wifi_rxtx_read() << 24);
-		printf(buffer + "0");
-	}
-		
-	//char strValue = buffer + "0";
-	//printf(strValue);
-	//return strValue;
+/* WIFI */
+ 
+static char wifi_read(void){
+	unsigned char r = uart_wifi_rxtx_read();
+	return r;
 }
+
 
 static void wifi_write(char *str){
 
@@ -225,16 +221,16 @@ static void wifi_write(char *str){
 	{
 		uart_wifi_rxtx_write(str[i]);
 		delay(1);
-	}
-	
-	
+	}	
 }
 
+/* SERVO*/
 static void servo_pwm(int pwm)
 {
     servo_driver_pos_write(pwm); // 0 - 250°
 }
 
+/* I2C */
 static void i2c_write(char *str){
 
 	for ( int i = 0; i < strlen(str); i++)
@@ -271,16 +267,17 @@ static void console_service(void)
 		//vga_test();
 	else if(strcmp(token, "wifiRead") == 0)
 		wifi_read();
-	else if(strcmp(token, "wifiWrite") == 0)
+	else if (strcmp(token, "wifiWrite") == 0)
 		wifi_write("Prueba");
 	else if(strcmp(token, "servo") == 0)
 		for (size_t i = 0; i < 200; i++)
 		{
 			servo_pwm(i);	
 		}
-	else if(strcmp(token, "i2cWrite") == 0)
-		wifi_write("Prueba");	
-		
+
+	else if (strcmp(token, "i2cWrite") == 0)
+		i2c_write("Prueba");
+
 	prompt();
 }
 

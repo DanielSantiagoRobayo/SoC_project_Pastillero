@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2.1 (64-bit)
+# SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
+# IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+# Start of session at: Sat Jun 25 19:17:07 2022
+# Process ID: 11876
+# Current directory: /home/julianscastro/Descargas/SoC_project_Pastillero/SoC_project_2022/build/nexys4ddr/gateware
+# Command line: vivado -mode batch -source nexys4ddr.tcl
+# Log file: /home/julianscastro/Descargas/SoC_project_Pastillero/SoC_project_2022/build/nexys4ddr/gateware/vivado.log
+# Journal file: /home/julianscastro/Descargas/SoC_project_Pastillero/SoC_project_2022/build/nexys4ddr/gateware/vivado.jou
+#-----------------------------------------------------------
+source nexys4ddr.tcl

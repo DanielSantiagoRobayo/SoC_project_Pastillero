@@ -30,10 +30,6 @@ class BaseSoC(SoCCore):
 
 		#Servo
 		platform.add_source("module/verilog/servo.v")
-
-		#Camara
-		#platform.add_source("module/verilog/Analyzer.v")
-		#platform.add_source("module/verilog/test_cam.v")
 		
 		
 		# SoC with CPU
